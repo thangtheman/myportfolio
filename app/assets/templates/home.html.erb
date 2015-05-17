@@ -1,0 +1,29 @@
+<div class="row app-container">
+  <input class="form-control search-bar" ng-model="query" placeholder="SEARCH TECHNOLOGIES USED..." typeahead="tech for tech in technologies | filter:$viewValue | limitTo:8">
+</div>
+<div class="row app-container">
+  <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
+    <li ng-repeat="a in apps | filter:query" 
+        class="f1_container"
+        ng-init="overEdit=false"
+        ng-mouseover="overEdit=true"
+        ng-mouseleave="overEdit=false">
+      <div class="project-tile">
+        <div class="project-image" style="
+          background: url({{a.thumbnail_url[0]}});
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: cover;">
+        </div>
+        <div class="text-center" ng-class="overEdit ? 'project-name-full':'project-name'">
+          {{a.name}}
+          <div ng-if="overEdit">
+            <small>{{a.built_with}}</small><br><br>
+            <a class="contact-button" ng-click="open(a._id.$oid)">DETAILS</a>
+          </div>
+        </div>
+        
+      </div>
+    </li>
+  </ul>
+</div>

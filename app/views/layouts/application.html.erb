@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toangular</title>
+    <%= favicon_link_tag('favicon.ico') %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body ng-app="myApp">
+
+  <div class="contain-to-grid">
+    <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a ui-sref="index"><img class="avatar" src="https://avatars1.githubusercontent.com/u/8865326?v=3&s=460"> TOAN NGUYEN LE</a></h1>
+        </li>
+         <!-- MOBILE -->
+        <li class="toggle-topbar menu-icon"><a><span></span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li><a ui-sref="home">PORTFOLIO</a></li>
+          <li><a ui-sref="app">CONTACT</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+    <%= yield %>  
+  </body>
+</html>

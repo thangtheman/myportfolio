@@ -1,0 +1,235 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+@import 'foundation-icons';
+@import "foundation/components/block-grid";
+//Font from google Font
+body, html {
+  height: 100%;
+}
+body  {
+  font-family:'Raleway',Helvetica,Arial,sans-serif;
+  font-weight:300;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  color: black;
+}
+a {
+  font-family:'Raleway',Helvetica,Arial,sans-serif;
+  font-weight:300;
+  color: white;
+}
+.contact-button {
+  color: white;
+  border:1px white solid;
+  border-radius:5px;
+  margin: 10px auto;
+  width: 200px;
+  height: 45px;
+  padding: 10px;
+}
+.search-bar {
+  width: 100%;
+  border:1px white solid;
+  font-family:'Raleway',Helvetica,Arial,sans-serif;
+  font-weight:300;
+  font-size: 15px;
+  background-color: rgba(255,255,255,0);
+  border-radius:5px;
+  margin: 10px auto;
+  height: 45px;
+  padding: 0 20px;
+}
+#contact-button:hover{
+  background-color:rgba(255,255,255,0.5);
+  color: black;
+}
+.avatar {
+  margin: 10px 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50%;
+}
+
+// PROJECT TILES
+// Outside container
+.project-tile {
+  position: relative;
+  height: 200px;
+  color: black;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.9);
+}
+.project-image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+.project-name {
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  height: 20%;
+  width: 100%;
+  top: 80%;
+  padding: 15px 0 0 0;
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+}
+.project-name-full {
+  position: absolute;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+  top: 0;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition:all linear 0.2s;
+  transition:all linear 0.2s;
+}
+
+// App modal
+.app-modal {
+
+}
+.contact-button-modal {
+  color: black;
+  border:1px black solid;
+  border-radius:5px;
+  margin: 10px auto;
+  width: 200px;
+  height: 45px;
+  padding: 10px;
+}
+img.project-pic{
+  width: 100%;
+  top: -1.5em;
+  border-radius: 5px 5px 0 0;
+}
+
+// CUSTOMIZE FOUNDATION TEMPLATE
+.hero{
+  background:url(angular_poster.png);
+  background-size:cover;
+  box-shadow:inset 0px 0px 0 2000px rgba(0,0,0,0.7);
+  height:80%; 
+}
+.intro-text{
+  padding-top:30%;
+  color:rgba(255,255,255,1);
+  text-align:center;
+}
+@media only screen and (min-width: 40.063em) {
+  .intro-text{
+  padding-top:15%;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+.intro-text{
+  padding-top:12%;
+  }
+}
+.intro-text p{
+  font-size:30px;
+}
+.about,.work,.contact{
+  padding:50px 0 0 0;
+  }
+.about img{
+  width:250px;
+  height:250px;
+  border-radius:150px;
+  -webkit-border-radius:150px;
+  -moz-border-radius:150px;
+}
+.work img:hover{
+  opacity:0.5;
+  -webkit-transition:0.3s ease;
+  -moz-transition:0.3s ease;
+  -ms-transition:0.3s ease;
+  -o-transition:0.3s ease;
+  transition:0.3s ease;
+}
+.work li{
+  height:140px;
+  overflow:hidden;
+}
+// HORIZONTAL LINE
+hr {
+  border:0;
+  height:1px;
+  background-image:-webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  opacity:0.8;
+}
+
+.social-share-icons {
+  font-size: 2em;
+  letter-spacing: 10px;
+}
+.contact-icons {
+  font-size: 2em;
+}
+// GITHUB
+a i.fi-social-github {
+  color: #CCEAF3;
+}
+i.fi-social-github:hover {
+  color: black;
+}
+
+// TWITTER
+i.fi-social-twitter {
+  color: #CCEAF3;
+}
+i.fi-social-twitter:hover {
+  color: #55ACEE;
+}
+i.fi-share:hover {
+  color: #55ACEE;
+}
+// LIKE BUTTON
+i.fi-heart {
+  height: 35px;
+  width: 37px;
+  position: relative;
+}
+i.fi-heart:hover {
+  color: rgb(190, 190, 190);
+}
+
+// Like number badge
+.like-number {
+  font-family:'Raleway',Helvetica,Arial,sans-serif;
+  font-weight:300;
+  position: absolute;
+  top: -7px;
+  font-size: 15px;
+  margin-left: -10px;
+  text-justify: center;
+}
+
+// App container
+.app-container {
+  padding: 0 15px;
+}
